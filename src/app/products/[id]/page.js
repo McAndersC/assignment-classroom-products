@@ -24,9 +24,7 @@ export default function Page({params}) {
     <div>
 
       <h1>{product.title}</h1>
-{/* 
-      {product.media ? <Image src={'/'+ product.media.url} alt={product.media.alt} width={product.media.width} height={product.media.height} /> : null}  */}
-
+      
     </div>
   )
 }
