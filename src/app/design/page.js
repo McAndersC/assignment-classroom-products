@@ -1,6 +1,7 @@
 import Footer from "@/components/footer/footer";
 import Navigation from "@/components/navigation/navigation";
 import Product from "@/components/products/product";
+import Products from "@/components/products/products";
 
 const Page = () => {
     return (
@@ -13,8 +14,8 @@ const Page = () => {
             <h3>Navigation</h3>
             <Navigation></Navigation>
 
-            <h3>Product</h3>
-            <Product></Product>
+            <h3>Products</h3>
+            <Products></Products>
             
             <h3>Footer</h3>
             <Footer></Footer>     

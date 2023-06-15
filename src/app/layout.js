@@ -1,5 +1,7 @@
+import Navigation from '@/components/navigation/navigation'
 import './globals.css'
 import { Titillium_Web } from 'next/font/google'
+import Footer from '@/components/footer/footer'
 
 const titillium = Titillium_Web({ subsets: ['latin'], weight : ['200', '300', '400', '600'] })
 
@@ -11,7 +13,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={titillium.className}>{children}</body>
+      <body className={titillium.className}>
+        <Navigation></Navigation>
+          {children}
+        <Footer></Footer>
+      </body>
     </html>
   )
 }
