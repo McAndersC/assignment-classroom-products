@@ -1,4 +1,4 @@
-export const products = [
+export const productsData = [
     {
       id: 1,
       title : 'Product 1377',
@@ -15,7 +15,7 @@ export const products = [
     {
       id: 2,
       title : 'Product Test',
-      discount: 30,
+      discount: 0,
       media : {
         url : '2.jpg',
         alt : 'logo',

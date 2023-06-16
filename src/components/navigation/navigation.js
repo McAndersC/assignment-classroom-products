@@ -3,6 +3,7 @@ import styles from "./navigation.module.css";
 import Link from "next/link";
 import { navdata } from "./navigation.service";
 import { useState } from "react";
+import { useBasketContext } from "@/context/basket.context";
 
 const McDmLogo = (props) => (
     <svg
@@ -20,6 +21,7 @@ const McDmLogo = (props) => (
 const Navigation = () => {
 
     const [navActive, setNavActive] = useState(false);
+    const {basket} = useBasketContext();
 
     return (  
         <div className={`${styles.navigation} ${navActive ? styles.active : null}`}> 
@@ -29,7 +31,9 @@ const Navigation = () => {
                 <div className={styles.logo}>
                     <McDmLogo style={{fill : '#fff'}} width={'100%'} height={'100%'}></McDmLogo>
                 </div>
-
+                <div>
+                    KURV ( {basket.length})
+                </div>
                 <div className={styles.actions} >
                     <div onClick={() => setNavActive(!navActive)}>BURGER</div>
                 </div>
